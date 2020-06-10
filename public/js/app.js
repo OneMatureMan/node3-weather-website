@@ -1,8 +1,3 @@
-console.log("Hello lar marbaklardar shar")
-
-
-
-
 const weatherForm = document.querySelector('form');
 const search = document.querySelector('input');
 const messageOne = document.querySelector('#message-1')
