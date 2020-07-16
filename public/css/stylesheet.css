@@ -51,4 +51,23 @@ button {
     background: #888888;
     color: white;
     padding: 8px;
+    margin-right: 5px;
 }
+
+.compose {
+    display: flex;
+    flex-shrink: 0;
+
+}
+
+.compose form {
+    display: flex;
+    margin-right: 5px;
+}
+
+.compose form button {
+    margin-left: 5px;
+}
+
+
+

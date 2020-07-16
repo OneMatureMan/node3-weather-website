@@ -67,8 +67,27 @@ app.get('/weather', (req, res) => {
         })
     })
 
-
 })
+
+app.get('/weatherByLocation', (req,res) => {
+    const lat = req.query.latitude
+    const lon = req.query.longitude
+    forecast(lat,lon, (error,forecastData,location) => {
+        if(error){
+            return res.send({error})
+        }
+
+        res.send({
+            forecast: forecastData,
+            location
+        })
+        
+        
+    })
+})
+
+
+
 
 app.get('/products', (req,res) => {
     if(!req.query.search){

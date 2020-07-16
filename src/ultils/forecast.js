@@ -8,9 +8,10 @@ const forcast = (lat,lon,callback) => {
         } else if (body.error){
             callback('Unable to start the service!', undefined)
         } else {
-            const forcastData = body.current.weather_descriptions[0] + ". It is currenty " + body.current.temperature + 
+            const forecastData = body.current.weather_descriptions[0] + ". It is currenty " + body.current.temperature + 
                                 " degrees out. It feels like " + body.current.feelslike + " degrees out. " +  body.current.wind_speed + " is the wind speed of the day!"
-            callback(undefined, forcastData);
+            const location = `${body.location.name}, ${body.location.region},${body.location.country}`
+            callback(undefined, forecastData,location);
         }
     })
     

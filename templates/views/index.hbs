@@ -10,10 +10,16 @@
     <div class='main-content'>
         {{>header}}
         <p>Use this site to get your weather!</p>
-        <form>
+        <div class='compose'>
+            <form>
             <input type='text' id='searchTerm' name='searchTerm' placeholder="Location">
             <button>Submit</button>
         </form>
+        <button id='send-location'>Your location</button>
+            
+        </div>
+        
+       
         <p id='message-1'></p>
         <p id='message-2'></p>
     
